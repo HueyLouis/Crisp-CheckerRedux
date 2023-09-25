@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Crisp Check",
+    "version": "0.1",
+    "description": "Rebuilding this extension",
+    "browser_action": {
+        "default_title": "Crisp Check Extension",
+        "default_popup": "html/popup.html"
+    }
+}
