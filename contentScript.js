@@ -21,6 +21,11 @@ class CrispChecker {
     const calculator = new Calculator();
     const resultsDiv = new ResultsDiv(calculator, includeFee);
     document.body.appendChild(resultsDiv.element);
+  
+    // Add a timer to log the time taken to load the resultsDiv
+    setTimeout(() => {
+      console.log('ResultsDiv loaded after 5 seconds');
+    }, 5000);
   }
 }
 
