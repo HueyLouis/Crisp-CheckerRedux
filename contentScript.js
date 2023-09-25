@@ -157,3 +157,4 @@ class ResultsDiv {
     headerDiv.textContent = "Drag from here";
     return headerDiv;
   }
+}
