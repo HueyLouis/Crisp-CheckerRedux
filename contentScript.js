@@ -156,3 +156,4 @@ class ResultsDiv {
     headerDiv.style.cssText = ` height: 20px; background-color: #ddd; cursor: move; width: 100%; text-align: center; border-bottom: 1px solid #ccc; `;
     headerDiv.textContent = "Drag from here";
     return headerDiv;
+  }
