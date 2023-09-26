@@ -2,22 +2,23 @@
 let includeFee
 chrome.storage.local.get(['includeFee'], function(result) {
     includeFee = result.includeFee;
+    console.log(includeFee);
 });
 
 // Listen for when tab is updated
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    console.log("tab update");
     // If the tabs status is 'complete'
     if (changeInfo.status === 'complete') {
-        //Check if content script has already ben injected into the tab
+        //Check if content script has already been injected into the tab
         console.log('checking content injected');
         chrome.tabs.query({
             active: true,
             currentWindow: true,
-            url: tab.url,
-            file: 'contentScript.js'
+            url: tab.url
         }, function(tabs) {
-            // If the content has not been injectd, inject it
-            if (tab.length === 0) {
+            // If the content has not been injected, inject it
+            if (tabs.length === 0) {
                 console.log('Content has not been injected, injecting')
                 chrome.tabs.executeScript(tabId, { file: 'contentScript.js' }, function() {
                     //Mark script as injected

@@ -1,5 +1,5 @@
+alert("hello world!");
 function runCrispChecker(includeFee) {
-    console.log("Running Crisp Checker")
     chrome.tabs.query({active: true, currentWindow: true }).then((tabs) => {
         chrome.scripting.executeScript({ target: { tabId: tabs.id }, files: ["contentScript.js"] }).then(() => {
             //Sace rge includeFee value in localStorage
@@ -13,6 +13,7 @@ function runCrispChecker(includeFee) {
 }
 
 document.getElementById("runCrispChecker").addEventListener("click", () => {
+    alert("test");
     runCrispChecker(true);
 });
 
