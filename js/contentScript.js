@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             background-color: #ddd;
             border: none;
             border-radius: 5px;
-            padding: 5pxl
+            padding: 5px;
             cursor: pointer;
         `;
 

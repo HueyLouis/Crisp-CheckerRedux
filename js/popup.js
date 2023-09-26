@@ -1,4 +1,3 @@
-alert("hello world!");
 function runCrispChecker(includeFee) {
     chrome.tabs.query({active: true, currentWindow: true }).then((tabs) => {
         chrome.scripting.executeScript({ target: { tabId: tabs.id }, files: ["contentScript.js"] }).then(() => {
@@ -13,7 +12,7 @@ function runCrispChecker(includeFee) {
 }
 
 document.getElementById("runCrispChecker").addEventListener("click", () => {
-    alert("test");
+    console.log("test");
     runCrispChecker(true);
 });
 
