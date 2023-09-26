@@ -3,11 +3,11 @@ document.getElementById('copyButton').addEventListener('click', function () {
     const now = new Date();
     const timestamp = now.toLocaleString();
 
-    // Get teh values of the checkboxes and dropdowns
+    // Get the values of the checkboxes and dropdowns
     const storage = document.getElementById('storage').checked ? 'Yes' : 'No';
     const militaryBase = document.getElementById('militaryBase').checked ? 'Yes' : 'No';
     const weightTickets = document.getElementById('weightTickets').checked ? 'Yes' : 'No';
-    const coi = document.getElementById('coi').check ? 'Yes' : 'No';
+    const coi = document.getElementById('coi').checked ? 'Yes' : 'No';
     const paymentMethod = document.getElementById('paymentMethod').value;
     const deliveryType = document.getElementById('deliveryType').value;
     const i1percflbs = document.getElementById('I1PERCFLBS').value;
@@ -16,7 +16,7 @@ document.getElementById('copyButton').addEventListener('click', function () {
     const managerCode = document.getElementById('managerCodeInput').value;
     const validCodes = ['12', '90', 'JackinCode', 'RayCode', 'ChrisCode'];
     if (!validCodes.includes(managerCode)) {
-        document.getElementById('copyStatus').textContent = "Invalidd manager code.";
+        document.getElementById('copyStatus').textContent = "Invalid manager code.";
         return;
     }
 
@@ -46,7 +46,7 @@ document.getElementById('copyButton').addEventListener('click', function () {
 
     // Calculate the max allowed binder
     const deposit = totalWithoutBinder * (percentage + 0.10);
-    const maxAllowedTotal =totalWithoutBinder / (1 - depositPercentage);
+    const maxAllowedTotal = totalWithoutBinder / (1 - depositPercentage);
     let maxBinderAllowed = maxAllowedTotal - totalWithoutBinder - deposit;
 
     // Ensure the binder + deposit is less than or equal to 43% of the total cost
@@ -81,7 +81,7 @@ document.getElementById('copyButton').addEventListener('click', function () {
     const pickUpPayment = remainingBalance / 2;
     const deliveryPayment = remainingBalance / 2;
 
-    const totalmove2 = remainingBalance + adjustedDeposit + lineCharge1 + lineCharge2;
+    const totalMove2 = remainingBalance + adjustedDeposit + lineCharge1 + lineCharge2;
 
     /***************************************
     Display the results in the div element 
